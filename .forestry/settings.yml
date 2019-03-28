@@ -6,24 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: Content
-- type: jekyll-posts
-  label: Posts
-  create: all
-  templates:
-  - post
-- type: jekyll-pages
-  label: Pages
-  create: all
-  templates:
-  - landing-page
-  - page
-- type: directory
-  path: _people
-  label: People
-  create: all
-  match: "*"
-  templates:
-  - person
 - type: directory
   path: _projects
   label: Projects
@@ -31,9 +13,27 @@ sections:
   match: "*"
   templates:
   - project
+- type: jekyll-pages
+  label: Pages
+  create: all
+  templates:
+  - landing-page
+  - page
+- type: jekyll-posts
+  label: Posts
+  create: all
+  templates:
+  - post
 - type: document
   path: _data/information.yml
   label: Contact Information
+- type: directory
+  path: _people
+  label: People
+  create: all
+  match: "*"
+  templates:
+  - person
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
